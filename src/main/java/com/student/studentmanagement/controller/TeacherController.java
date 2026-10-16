@@ -1,3 +1,4 @@
+
 package com.student.studentmanagement.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/teachers")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://student-management-frontend-red.vercel.app"
+})
 public class TeacherController {
 
     @Autowired
